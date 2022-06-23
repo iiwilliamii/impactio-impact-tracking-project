@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769448783732",
+    "project_id": "impactio-project",
+    "storage_bucket": "impactio-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769448783732:android:fb36cc57edffdde0c28621",
+        "android_client_info": {
+          "package_name": "com.example.impactioproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769448783732-8td77s5j7ad8h6t208rn4ob2683606te.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6fgpzqboPjsyrxCvKqvHqf1lSxghtk_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769448783732-8td77s5j7ad8h6t208rn4ob2683606te.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
