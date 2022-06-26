@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/PUBG/StudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_login.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/PUBG/StudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/drawable/background_shape.xml" value="0.26" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/drawable/edit_button.xml" value="0.249" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.249" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.249" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/drawable/ic_profile.xml" value="0.249" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_login.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/All In One PC/StudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_profile.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/William Zhu/AndroidStudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/William Zhu/AndroidStudioProjects/impactio-impact-tracking-project/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/willi/AndroidStudioProjects/ImpactioProject/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
       </map>
     </option>
