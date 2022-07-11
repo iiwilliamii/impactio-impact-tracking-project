@@ -50,6 +50,17 @@ public class Projects {
     public static ArrayList<Projects> getProjects() {
         ArrayList<Projects> projects = new ArrayList<>();
         projects.add(new Projects("01", "Project 1", "P1", "test"));
+        projects.add(new Projects("02", "Project 2", "P2", "test2"));
         return projects;
+    }
+
+    public static Projects findProjects(String symbol) {
+        ArrayList<Projects> projects = Projects.getProjects();
+        for (final Projects p1 : projects) {
+            if (p1.getSymbol().equals(symbol)) {
+                return p1;
+            }
+        }
+        return null;
     }
 }
