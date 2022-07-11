@@ -3,4 +3,8 @@
     <string name="project_name">Project Name</string>
     <string name="profile">Profile</string>
     <string name="welcome_back">Welcome Back, </string>
+    <string name="project1">Project 1</string>
+    <string name="project2">Project 2</string>
+    <string name="project1_description">test1</string>
+    <string name="project2_description">test2</string>
 </resources>
