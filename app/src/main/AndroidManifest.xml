@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
+            android:name=".PrimaryLoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailActivity"
             android:exported="false" />
         <activity
