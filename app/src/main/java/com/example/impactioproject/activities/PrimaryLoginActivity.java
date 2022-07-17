@@ -1,8 +1,10 @@
-package com.example.impactioproject;
+package com.example.impactioproject.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.impactioproject.R;
 
 public class PrimaryLoginActivity extends AppCompatActivity {
 

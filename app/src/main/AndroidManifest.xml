@@ -13,18 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
-            android:name=".PrimaryLoginActivity"
+            android:name=".activities.PrimaryLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".activities.DetailActivity"
             android:exported="false" />
-        <activity android:name=".ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainMenuActivity"
+        <activity android:name=".activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivityMain"
+            android:name=".activities.MainMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivityMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false" />
     </application>
 

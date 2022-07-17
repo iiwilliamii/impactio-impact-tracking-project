@@ -1,10 +1,12 @@
-package com.example.impactioproject;
+package com.example.impactioproject.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
+import com.example.impactioproject.R;
+import com.example.impactioproject.activities.LoginActivityMain;
 
 public class MainActivity extends AppCompatActivity {
 

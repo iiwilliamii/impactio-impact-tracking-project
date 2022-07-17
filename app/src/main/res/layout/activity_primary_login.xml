@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D2D9E7"
-    tools:context=".PrimaryLoginActivity">
+    tools:context=".activities.PrimaryLoginActivity">
 
     <View
         android:id="@+id/view2"

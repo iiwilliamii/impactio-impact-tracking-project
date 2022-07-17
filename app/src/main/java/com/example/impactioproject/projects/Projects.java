@@ -1,4 +1,4 @@
-package com.example.impactioproject;
+package com.example.impactioproject.projects;
 
 import java.util.ArrayList;
 
