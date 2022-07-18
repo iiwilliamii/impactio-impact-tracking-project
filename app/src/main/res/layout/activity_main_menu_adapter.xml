@@ -6,18 +6,18 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="385dp"
+        android:layout_width="370dp"
         android:layout_height="200dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.009">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/iv_shop_main"

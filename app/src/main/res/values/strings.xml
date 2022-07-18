@@ -3,6 +3,7 @@
     <string name="project_name">Project Name</string>
     <string name="profile">:</string>
     <string name="welcome_back">Welcome Back, </string>
+    <string name="placeholder_name">William</string>
     <string name="welcome_message">Glad to see you back</string>
     <string name="project1">Project 1</string>
     <string name="project2">Project 2</string>
@@ -15,4 +16,17 @@
     <string name="sort_by_reviewed">To Be Reviewed</string>
     <string name="sort_by_completed">Completed</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_status">Project Status:</string>
+    <string name="good_status">Good</string>
+    <string name="review_required">Review Required</string>
+    <string name="running_behind">Running Behind</string>
+    <string name="upload">Upload</string>
+    <string name="post">Post</string>
+    <string name="project_members">Project Members</string>
+    <string name="project_timeline">Project Timeline</string>
+    <string name="Project_activity">Project Activity</string>
+    <string name="details">Details</string>
+    <string name="name1">Claudia Alves</string>
+    <string name="project_update1">Updated Criteria #21</string>
+    <string name="update_time1">1h ago</string>
 </resources>
