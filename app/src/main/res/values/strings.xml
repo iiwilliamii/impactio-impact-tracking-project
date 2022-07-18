@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">Impactio Project</string>
     <string name="project_name">Project Name</string>
-    <string name="profile">Profile</string>
+    <string name="profile">:</string>
     <string name="welcome_back">Welcome Back, </string>
+    <string name="welcome_message">Glad to see you back</string>
     <string name="project1">Project 1</string>
     <string name="project2">Project 2</string>
+    <string name="enrolled_project">Enrolled Project</string>
+    <string name="enrolled_project_title">Reduced Inequality</string>
     <string name="project1_description">test1</string>
     <string name="project2_description">test2</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sort_by_all">All</string>
+    <string name="sort_by_progress">In Progress</string>
+    <string name="sort_by_reviewed">To Be Reviewed</string>
+    <string name="sort_by_completed">Completed</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
