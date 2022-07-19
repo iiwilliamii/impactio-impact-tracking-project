@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
-            android:name=".activities.PrimaryLoginActivity"
+            android:name=".activities.LoginActivityMain"
             android:exported="false" />
         <activity
             android:name=".activities.DetailActivity"
@@ -24,7 +24,7 @@
             android:name=".activities.MainMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.LoginActivityMain"
+            android:name=".activities.PrimaryLoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
