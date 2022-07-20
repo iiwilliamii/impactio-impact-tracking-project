@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
-            android:name=".ProjectUpdateActivity"
+            android:name=".activities.ProjectUpdateActivity"
             android:exported="false" />
         <activity
             android:name=".activities.LoginActivityMain"
