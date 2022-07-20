@@ -13,12 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
+            android:name=".ProjectUpdateActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.LoginActivityMain"
             android:exported="false" />
         <activity
             android:name=".activities.DetailActivity"
             android:exported="false" />
-        <activity android:name=".activities.ProfileActivity"
+        <activity
+            android:name=".activities.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activities.MainMenuActivity"
