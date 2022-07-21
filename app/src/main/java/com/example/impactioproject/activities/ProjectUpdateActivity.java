@@ -1,6 +1,9 @@
 package com.example.impactioproject.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -17,12 +20,19 @@ import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.example.impactioproject.PostModels.Post;
+import com.example.impactioproject.PostModels.PostAdapter;
 import com.example.impactioproject.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectUpdateActivity extends AppCompatActivity {
 
@@ -33,6 +43,13 @@ public class ProjectUpdateActivity extends AppCompatActivity {
     private ImageView mProfile, mSend;
     private TextView mTitle, mDescription;
     private ProgressBar mClickProgress;
+    private RecyclerView mRecyclerView;
+    private PostAdapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    List<Post> postList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +58,12 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+        mRecyclerView = findViewById(R.id.rv_post_list);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Posts");
 
         iniPopup();
 
@@ -52,6 +75,37 @@ public class ProjectUpdateActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                postList = new ArrayList<>();
+                for (DataSnapshot postSnap: snapshot.getChildren()) {
+                    Post post = postSnap.getValue(Post.class);
+                    postList.add(post);
+                }
+
+                PostAdapter.RecyclerViewListener listener = new PostAdapter.RecyclerViewListener() {
+                    @Override
+                    public void onClick(View view, String Symbol) {
+                        //TODO: make something happen when you click this
+                    }
+                };
+                mAdapter = new PostAdapter(listener, postList);
+                mRecyclerView.setAdapter(mAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 

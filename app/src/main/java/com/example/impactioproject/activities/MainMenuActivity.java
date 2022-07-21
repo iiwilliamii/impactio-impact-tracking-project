@@ -28,7 +28,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         mName = findViewById(R.id.tv_name);
         mProfile = findViewById(R.id.btn_profile);
-        mRecyclerView = findViewById(R.id.rv_list);
+        mRecyclerView = findViewById(R.id.rv_project_list);
         mRecyclerView.setHasFixedSize(true);
 
         mLayoutManager = new LinearLayoutManager(this);
