@@ -16,9 +16,13 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
+import com.example.impactioproject.PostModels.Post;
 import com.example.impactioproject.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ProjectUpdateActivity extends AppCompatActivity {
 
@@ -75,11 +79,34 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
                 if (!mTitle.getText().toString().isEmpty() && !mDescription.getText().toString().isEmpty()) {
 
+                    Post post = new Post(mTitle.getText().toString(), mDescription.getText().toString(),currentUser.getUid());
+                    addPost(post);
+
                 }else {
                     showMessage("Please fill in everything before sending!");
                     mSend.setVisibility(View.VISIBLE);
                     mClickProgress.setVisibility(View.INVISIBLE);
                 }
+            }
+        });
+    }
+
+    private void addPost(Post post) {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Posts").push();
+
+        //get post uID and update post key
+        String key = myRef.getKey();
+        post.setPostKey(key);
+
+        myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                showMessage("Post Added successfully");
+                mClickProgress.setVisibility(View.INVISIBLE);
+                mSend.setVisibility(View.VISIBLE);
+                popAddPost.dismiss();
             }
         });
     }
