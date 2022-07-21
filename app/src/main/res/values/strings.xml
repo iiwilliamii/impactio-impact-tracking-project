@@ -20,7 +20,7 @@
     <string name="good_status">Good</string>
     <string name="review_required">Review Required</string>
     <string name="running_behind">Running Behind</string>
-    <string name="upload">Upload</string>
+    <string name="Update">Update</string>
     <string name="post">Post</string>
     <string name="project_members">Project Members</string>
     <string name="project_timeline">Project Timeline</string>
@@ -29,4 +29,6 @@
     <string name="name1">Claudia Alves</string>
     <string name="project_update1">Updated Criteria #21</string>
     <string name="update_time1">1h ago</string>
+    <string name="add">Add</string>
+    <string name="tracker_add">Add Tracker Criteria Name</string>
 </resources>
