@@ -1,5 +1,6 @@
 package com.example.impactioproject.PostModels;
 
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.impactioproject.R;
 
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
@@ -36,10 +39,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
 
+        String stringDate = mData.get(position).getTimeStamp().toString();
+        Long Date = Long.parseLong(stringDate);
+
         holder.mTitle.setText(mData.get(position).getTitle());
         holder.mDescription.setText(mData.get(position).getDescription());
-        holder.mTime.setText(mData.get(position).getTimeStamp().toString());
-
+        holder.mTime.setText(getDate(Date).toString());
 
     }
 
@@ -63,5 +68,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     public interface RecyclerViewListener {
         void onClick(View view, String Symbol);
+    }
+
+    private String getDate(long time) {
+        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+        cal.setTimeInMillis(time * 1000);
+        String date = DateFormat.format("dd-MM-yyyy", cal).toString();
+        return date;
     }
 }
