@@ -8,17 +8,27 @@ public class Post {
     private String title;
     private String description;
     private String userId;
+    private String postSymbol;
     private Object timeStamp;
 
-    public Post(String title, String description, String userId) {
+    public Post(String title, String description, String postSymbol, String userId) {
         this.title = title;
         this.description = description;
+        this.postSymbol = postSymbol;
         this.userId = userId;
         this.timeStamp = ServerValue.TIMESTAMP;
     }
 
     public Post() {
 
+    }
+
+    public String getPostSymbol() {
+        return postSymbol;
+    }
+
+    public void setPostSymbol(String postSymbol) {
+        this.postSymbol = postSymbol;
     }
 
     public String getPostKey() {

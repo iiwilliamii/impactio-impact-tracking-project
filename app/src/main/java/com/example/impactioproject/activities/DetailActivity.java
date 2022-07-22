@@ -11,18 +11,28 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.impactioproject.R;
+import com.example.impactioproject.projects.Projects;
 
 public class DetailActivity extends AppCompatActivity {
 
     private Button mBtnActivity;
-    private TextView mDisplayName, mDisplayPoints;
+    private TextView mDisplayTitle, mDisplayPoints;
     private Integer score = 0;
+    private Projects project;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
+        mDisplayTitle = findViewById(R.id.tv_detail_title);
+
+        Intent intent = getIntent();
+        String projectSymbolId = intent.getStringExtra("Symbol");
+        project = Projects.findProjects(projectSymbolId);
+        if (project != null) {
+            mDisplayTitle.setText(project.getName());
+        }
 
         SharedPreferences sp = this.getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         score = sp.getInt("score", 0);
@@ -32,7 +42,7 @@ public class DetailActivity extends AppCompatActivity {
         mBtnActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                launchProjectUpdates();
+                launchProjectUpdates(projectSymbolId);
             }
         });
 
@@ -45,8 +55,9 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    private void launchProjectUpdates() {
+    private void launchProjectUpdates(String projectSymbol) {
         Intent intent = new Intent(this, ProjectUpdateActivity.class);
+        intent.putExtra("projectSymbol", projectSymbol);
         startActivity(intent);
 
     }

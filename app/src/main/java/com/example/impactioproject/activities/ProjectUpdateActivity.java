@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -62,10 +63,13 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Posts");
+        Intent intent = new Intent();
+        String projectSymbol = intent.getStringExtra("ProjectSymbol");
 
-        iniPopup();
+        iniPopup(projectSymbol);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Posts" + projectSymbol);
 
         mPopup = findViewById(R.id.btn_popup);
         mPopup.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +114,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
     }
 
 
-    private void iniPopup() {
+    private void iniPopup(String projectSymbol) {
         popAddPost = new Dialog(this);
         popAddPost.setContentView(R.layout.popup_add_post);
         popAddPost.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -133,8 +137,8 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
                 if (!mTitle.getText().toString().isEmpty() && !mDescription.getText().toString().isEmpty()) {
 
-                    Post post = new Post(mTitle.getText().toString(), mDescription.getText().toString(),currentUser.getUid());
-                    addPost(post);
+                    Post post = new Post(mTitle.getText().toString(), mDescription.getText().toString(), projectSymbol, currentUser.getUid());
+                    addPost(post, projectSymbol);
 
                 }else {
                     showMessage("Please fill in everything before sending!");
@@ -145,10 +149,10 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         });
     }
 
-    private void addPost(Post post) {
+    private void addPost(Post post, String projectSymbol) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Posts").push();
+        DatabaseReference myRef = database.getReference("Posts" + projectSymbol).push();
 
         //get post uID and update post key
         String key = myRef.getKey();
