@@ -92,8 +92,8 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         public ProjectViewHolder(View view, RecyclerViewClickListener listener) {
             super(view);
             mImage = view.findViewById(R.id.iv_shop_main);
-            mName = view.findViewById(R.id.item_name);
-            mDescription = view.findViewById(R.id.tv_item_short);
+            mName = view.findViewById(R.id.tv_post_title);
+            mDescription = view.findViewById(R.id.tv_post_description);
             mListener = listener;
             view.setOnClickListener(this);
         }

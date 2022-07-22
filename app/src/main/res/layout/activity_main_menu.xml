@@ -49,7 +49,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_list"
+        android:id="@+id/rv_project_list"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -139,7 +139,7 @@
         android:layout_marginBottom="28dp"
         android:text="@string/sort_by_all"
         android:textSize="8sp"
-        app:layout_constraintBottom_toTopOf="@+id/rv_list"
+        app:layout_constraintBottom_toTopOf="@+id/rv_project_list"
         app:layout_constraintStart_toStartOf="@+id/textView3" />
 
     <Button

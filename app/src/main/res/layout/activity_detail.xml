@@ -7,7 +7,7 @@
     tools:context=".activities.DetailActivity">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_detail_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,18 +24,18 @@
         android:layout_marginTop="8dp"
         android:text="@string/project_status"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_update_tracking"
         android:layout_width="168dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:backgroundTint="#FFFFFF"
         android:elevation="20dp"
-        android:text="@string/upload"
+        android:text="@string/Update"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -49,7 +49,7 @@
         android:elevation="20dp"
         android:text="@string/post"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_update_tracking"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -65,14 +65,48 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
+        android:id="@+id/tv_tracker_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/good_status"
+        android:textColor="#62F641"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update_tracking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dodd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:text="/250"
+        android:textColor="#0E120D"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update_tracking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/project_timeline"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update_tracking" />
 
     <TextView
         android:id="@+id/textView17"
