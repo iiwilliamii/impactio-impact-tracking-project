@@ -59,10 +59,14 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProjectUpdateActivity.class);
         intent.putExtra("projectSymbol", projectSymbol);
         startActivity(intent);
-
     }
 
     private void launchProjectTrackers(){
+        Intent intent = new Intent(DetailActivity.this, TrackerDetailActivity.class);
+        startActivity(intent);
+    }
+
+    private void launchProjectFunding(){
         Intent intent = new Intent(DetailActivity.this, TrackerDetailActivity.class);
         startActivity(intent);
     }
