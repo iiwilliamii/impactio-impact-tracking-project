@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.impactioproject.Funding.FundingTrackerActivity;
 import com.example.impactioproject.R;
 import com.example.impactioproject.projects.Projects;
 
@@ -53,6 +54,14 @@ public class DetailActivity extends AppCompatActivity {
                 launchProjectTrackers();
             }
         });
+
+        Button btnFunding = findViewById(R.id.btn_timeline);
+        btnFunding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchProjectFunding();
+            }
+        });
     }
 
     private void launchProjectUpdates(String projectSymbol) {
@@ -67,7 +76,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void launchProjectFunding(){
-        Intent intent = new Intent(DetailActivity.this, TrackerDetailActivity.class);
+        Intent intent = new Intent(DetailActivity.this, FundingTrackerActivity.class);
         startActivity(intent);
     }
 }
