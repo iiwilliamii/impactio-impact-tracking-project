@@ -54,12 +54,17 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
         mDisplayTitle = findViewById(R.id.tv_detail_title);
+        mBtnPost = findViewById(R.id.btn_post_activity);
+        mDisplayDescription = findViewById(R.id.tv_project_detail);
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
 
         Intent intent = getIntent();
         String projectSymbolId = intent.getStringExtra("Symbol");
         project = Projects.findProjects(projectSymbolId);
         if (project != null) {
             mDisplayTitle.setText(project.getName());
+            mDisplayDescription.setText(project.getSymbol());
         }
 
         SharedPreferences sp = this.getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
