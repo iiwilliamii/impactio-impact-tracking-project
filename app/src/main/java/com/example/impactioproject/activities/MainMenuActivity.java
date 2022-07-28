@@ -60,7 +60,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private void launchDetailActivity(String projectSymbol) {
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra("Symbol", projectSymbol);
+        intent.putExtra("projectSymbol", projectSymbol);
         startActivity(intent);
     }
 }

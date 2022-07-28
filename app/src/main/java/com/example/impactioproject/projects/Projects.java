@@ -49,8 +49,8 @@ public class Projects {
 
     public static ArrayList<Projects> getProjects() {
         ArrayList<Projects> projects = new ArrayList<>();
-        projects.add(new Projects("01", "Project 1", "P1", "test"));
-        projects.add(new Projects("02", "Project 2", "P2", "test2"));
+        projects.add(new Projects("01", "Project 1", "P1", "This is a test script on project 1 to see if it works."));
+        projects.add(new Projects("02", "Project 2", "P2", "This is a test script on project 2 to see if it works."));
         return projects;
     }
 

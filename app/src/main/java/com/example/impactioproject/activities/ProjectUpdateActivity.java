@@ -23,7 +23,9 @@ import com.bumptech.glide.Glide;
 import com.example.impactioproject.PostModels.Post;
 import com.example.impactioproject.PostModels.PostAdapter;
 import com.example.impactioproject.R;
+import com.example.impactioproject.projects.Projects;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -39,7 +41,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     FirebaseUser currentUser;
-    private Button mPopup;
+    private FloatingActionButton mPopup;
     Dialog popAddPost;
     private ImageView mProfile, mSend;
     private TextView mTitle, mDescription;
@@ -69,9 +71,9 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         iniPopup(projectSymbol);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Posts" + projectSymbol);
+        databaseReference = firebaseDatabase.getReference("Posts");
 
-        mPopup = findViewById(R.id.btn_popup);
+        mPopup = findViewById(R.id.floatingActionButton);
         mPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,6 +128,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         mDescription = popAddPost.findViewById(R.id.editDescription);
         mClickProgress = popAddPost.findViewById(R.id.progressBar);
         mSend = popAddPost.findViewById(R.id.iv_send);
+        mClickProgress.setVisibility(View.INVISIBLE);
 
         Glide.with(ProjectUpdateActivity.this).load(currentUser.getPhotoUrl()).into(mProfile);
 
@@ -152,7 +155,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
     private void addPost(Post post, String projectSymbol) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Posts" + projectSymbol).push();
+        DatabaseReference myRef = database.getReference("Posts").push();
 
         //get post uID and update post key
         String key = myRef.getKey();
