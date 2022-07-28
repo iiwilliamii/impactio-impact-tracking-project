@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImpactioProject">
         <activity
+            android:name=".Funding.FundingTrackerActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.TrackerAddActivity"
             android:exported="false" />
         <activity

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.example.impactioproject.Funding.FundingTrackerActivity;
 import com.bumptech.glide.Glide;
 import com.example.impactioproject.PostModels.Post;
 import com.example.impactioproject.R;
@@ -53,17 +54,12 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
         mDisplayTitle = findViewById(R.id.tv_detail_title);
-        mDisplayDescription = findViewById(R.id.tv_project_detail);
-        mBtnPost = findViewById(R.id.btn_post_activity);
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
 
         Intent intent = getIntent();
-        String projectSymbolId = intent.getStringExtra("projectSymbol");
+        String projectSymbolId = intent.getStringExtra("Symbol");
         project = Projects.findProjects(projectSymbolId);
         if (project != null) {
             mDisplayTitle.setText(project.getName());
-            mDisplayDescription.setText(project.getSymbol());
         }
 
         SharedPreferences sp = this.getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
@@ -83,6 +79,14 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 launchProjectTrackers();
+            }
+        });
+
+        Button btnFunding = findViewById(R.id.btn_timeline);
+        btnFunding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchProjectFunding();
             }
         });
 
@@ -168,6 +172,11 @@ public class DetailActivity extends AppCompatActivity {
 
     private void launchProjectTrackers(){
         Intent intent = new Intent(DetailActivity.this, TrackerDetailActivity.class);
+        startActivity(intent);
+    }
+
+    private void launchProjectFunding(){
+        Intent intent = new Intent(DetailActivity.this, FundingTrackerActivity.class);
         startActivity(intent);
     }
 }
