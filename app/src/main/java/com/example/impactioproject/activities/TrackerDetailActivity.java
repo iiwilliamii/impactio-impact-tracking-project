@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,8 +17,8 @@ import com.example.impactioproject.R;
 
 public class TrackerDetailActivity extends AppCompatActivity {
     private Integer score = 0;
-    private String name,sdg;
-    private TextView mCurrentPoints, mNewName, mNewSDG;
+    private View mC1Name;
+    private TextView mCurrentPoints, mNewName, mNewSDG, c1_tracker_name;
     private CardView mCardView10, mCardView25, mCardView50, mCardView100, mCardView250;
     private Button returnshop;
 
@@ -30,13 +28,11 @@ public class TrackerDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tracker_detail);
 
         mCurrentPoints = findViewById(R.id.shopCurrentPoints);
-        mNewName = findViewById(R.id.test_display);
-        mNewSDG = findViewById(R.id.test_display2);
         mCardView10 = findViewById(R.id.cv_10);
         mCardView25 = findViewById(R.id.cv_25);
         mCardView50 = findViewById(R.id.cv_50);
         mCardView100 = findViewById(R.id.cv_100);
-        mCardView250 = findViewById(R.id.cv_250);
+
 
 //        Animation animation = new AnimationUtils().loadAnimation(getApplicationContext(), R.anim.fadein);
 //        mCardView10.setAnimation(animation);
@@ -49,11 +45,6 @@ public class TrackerDetailActivity extends AppCompatActivity {
         score = sp.getInt("score", 0);
         mCurrentPoints.setText("Current Points: " + Integer.toString(score) +" " + "/250");
 
-        SharedPreferences sp2 = this.getSharedPreferences("TrackerName", Context.MODE_PRIVATE);
-        name = sp2.getString("name", " ");
-        sdg = sp2.getString("sdg", " ");
-        mNewName.setText(name);
-        mNewSDG.setText(sdg);
 
         Button btnShop = findViewById(R.id.returnBack);
         btnShop.setOnClickListener(new View.OnClickListener() {
@@ -80,11 +71,17 @@ public class TrackerDetailActivity extends AppCompatActivity {
 
     public void add1(View view) {
         score += 25;
+        String c1name = "Reduce hunger in Africa";
+        String c1sdg = "SDG:12";
+        String c1description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt("score", score);
+        editor.putString("c1name", c1name);
+        editor.putString("c1sdg", c1sdg);
+        editor.putString("c1description", c1description);
         editor.apply();
-        String purchaseSuccess = "Purchase Successful!";
+        String purchaseSuccess = "Criteria has been added successfully!";
         Toast.makeText(TrackerDetailActivity.this, purchaseSuccess, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(TrackerDetailActivity.this, DetailActivity.class);
@@ -92,9 +89,15 @@ public class TrackerDetailActivity extends AppCompatActivity {
     }
     public void add2(View view) {
         score += 30;
+        String c2name = "Improve education standards by 12.5% in Sri Lanka";
+        String c2sdg = "SDG::4";
+        String c2description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt("score", score);
+        editor.putString("c2name", c2name);
+        editor.putString("c2sdg", c2sdg);
+        editor.putString("c2description", c2description);
         editor.apply();
         String purchaseSuccess = "Criteria has been added successfully!";
 
@@ -103,10 +106,16 @@ public class TrackerDetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void add3(View view) {
-        score += 50;
+        score += 10;
+        String c3name = "Finish yearly financial report by EOFY 2023";
+        String c3sdg = "SDG:N/A";
+        String c3description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt("score", score);
+        editor.putString("c3name", c3name);
+        editor.putString("c3sdg", c3sdg);
+        editor.putString("c3description", c3description);
         editor.apply();
         String purchaseSuccess = "Criteria has been added successfully!";
 
@@ -116,18 +125,6 @@ public class TrackerDetailActivity extends AppCompatActivity {
     }
     public void add4(View view) {
         score += 10;
-        SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putInt("score", score);
-        editor.apply();
-        String purchaseSuccess = "Criteria has been added successfully!";
-        Toast.makeText(TrackerDetailActivity.this, purchaseSuccess, Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(TrackerDetailActivity.this, DetailActivity.class);
-        startActivity(intent);
-    }
-    public void add5(View view) {
-        score += 75;
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt("score", score);

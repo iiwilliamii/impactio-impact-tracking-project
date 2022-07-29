@@ -34,12 +34,22 @@ import java.util.List;
 public class DetailActivity extends AppCompatActivity {
 
     private Button mBtnActivity, mBtnPost;
-    private TextView mDisplayTitle, mDisplayPoints, mDisplayDescription;
+    private String name,sdg;
+    private TextView mDisplayTitle, mDisplayPoints, mDisplayDescription, mNewSDG;
     private ProgressBar mClickProgress;
     private Integer score = 0;
+    private Integer score2 = 0;
     private Projects project;
     private ImageView mProfile, mSend;
     private  TextView mTitle, mDescription;
+    private TextView mC1name,mC1sdg, mC1description;
+    private String c1name,c1sdg,c1description;
+    private TextView mC2name,mC2sdg, mC2description;
+    private String c2name,c2sdg,c2description;
+    private TextView mC3name,mC3sdg, mC3description;
+    private String c3name,c3sdg,c3description;
+    private TextView mc4Title,mC4name, mC4sdg, mC4description;
+    private String c4title,c4name,c4sdg,c4description;
     Dialog popAddPost;
 
     FirebaseAuth mAuth;
@@ -55,9 +65,25 @@ public class DetailActivity extends AppCompatActivity {
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
         mDisplayTitle = findViewById(R.id.tv_detail_title);
         mBtnPost = findViewById(R.id.btn_post_activity);
-        mDisplayDescription = findViewById(R.id.tv_project_detail);
+        mDisplayDescription = findViewById(R.id.display);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+        mNewSDG = findViewById(R.id.test_display2);
+
+        //Criteria's
+        mC1name = findViewById(R.id.c1_display_name);
+        mC1sdg = findViewById(R.id.c1_display_sdg);
+        mC1description = findViewById(R.id.c1_display_description);
+        mC2name = findViewById(R.id.c2_display_name);
+        mC2sdg = findViewById(R.id.c2_display_sdg);
+        mC2description = findViewById(R.id.c2_display_description);
+        mC3name = findViewById(R.id.c3_display_name);
+        mC3sdg = findViewById(R.id.c3_display_sdg);
+        mC3description = findViewById(R.id.c3_display_description);
+        mc4Title = findViewById(R.id.c4_title);
+        mC4name = findViewById(R.id.c4_display_name);
+        mC4sdg = findViewById(R.id.c4_display_sdg);
+        mC4description = findViewById(R.id.c4_display_description);
 
         Intent intent = getIntent();
         String projectSymbolId = intent.getStringExtra("projectSymbol");
@@ -69,7 +95,38 @@ public class DetailActivity extends AppCompatActivity {
 
         SharedPreferences sp = this.getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         score = sp.getInt("score", 0);
+        c1name = sp.getString("c1name", " ");
+        c1sdg = sp.getString("c1sdg", " ");
+        c1description = sp.getString("c1description", " ");
+        c2name = sp.getString("c2name", " ");
+        c2sdg = sp.getString("c2sdg", " ");
+        c2description = sp.getString("c2description", " ");
+        c3name = sp.getString("c3name", " ");
+        c3sdg = sp.getString("c3sdg", " ");
+        c3description = sp.getString("c3description", " ");
         mDisplayPoints.setText(Integer.toString(score));
+        mC1name.setText(c1name);
+        mC1sdg.setText(c1sdg);
+        mC1description.setText(c1description);
+        mC2name.setText(c2name);
+        mC2sdg.setText(c2sdg);
+        mC2description.setText(c2description);
+        mC3name.setText(c3name);
+        mC3sdg.setText(c3sdg);
+        mC3description.setText(c3description);
+
+        SharedPreferences sp2 = this.getSharedPreferences("TrackerName", Context.MODE_PRIVATE);
+        String c4title = sp2.getString("c4title", " ");
+        String c4name = sp2.getString("c4name", " ");
+        String c4description = sp2.getString("c4description", " ");
+        String c4sdg = sp2.getString("c4sdg", " ");
+        score2 = sp2.getInt("score", 0);
+        mDisplayPoints.setText(Integer.toString(score));
+        mc4Title.setText(c4title);
+        mC4name.setText(c4name);
+        mC4sdg.setText(c4sdg);
+        mC4description.setText(c4description);
+
 
         mBtnActivity = findViewById(R.id.btn_activity);
         mBtnActivity.setOnClickListener(new View.OnClickListener() {
