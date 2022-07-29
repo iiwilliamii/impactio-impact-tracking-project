@@ -44,7 +44,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
     private FloatingActionButton mPopup;
     Dialog popAddPost;
     private ImageView mProfile, mSend;
-    private TextView mTitle, mDescription;
+    private TextView mTitle, mDescription, mTestSymbol;
     private ProgressBar mClickProgress;
     private RecyclerView mRecyclerView;
     private PostAdapter mAdapter;
@@ -62,16 +62,18 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         mRecyclerView = findViewById(R.id.rv_post_list);
+        mTestSymbol = findViewById(R.id.tv_testSymbol);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        Intent intent = new Intent();
-        String projectSymbol = intent.getStringExtra("ProjectSymbol");
+        Intent intent = getIntent();
+        String projectSymbol = intent.getStringExtra("projectSymbol");
+        mTestSymbol.setText(projectSymbol);
 
         iniPopup(projectSymbol);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Posts");
+        databaseReference = firebaseDatabase.getReference("Posts" + projectSymbol);
 
         mPopup = findViewById(R.id.floatingActionButton);
         mPopup.setOnClickListener(new View.OnClickListener() {
@@ -155,7 +157,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
     private void addPost(Post post, String projectSymbol) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Posts").push();
+        DatabaseReference myRef = database.getReference("Posts" + projectSymbol).push();
 
         //get post uID and update post key
         String key = myRef.getKey();

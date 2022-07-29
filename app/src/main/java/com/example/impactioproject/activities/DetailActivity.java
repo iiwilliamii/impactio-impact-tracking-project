@@ -60,7 +60,7 @@ public class DetailActivity extends AppCompatActivity {
         currentUser = mAuth.getCurrentUser();
 
         Intent intent = getIntent();
-        String projectSymbolId = intent.getStringExtra("Symbol");
+        String projectSymbolId = intent.getStringExtra("projectSymbol");
         project = Projects.findProjects(projectSymbolId);
         if (project != null) {
             mDisplayTitle.setText(project.getName());
