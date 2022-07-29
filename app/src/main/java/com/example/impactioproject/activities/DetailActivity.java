@@ -65,10 +65,8 @@ public class DetailActivity extends AppCompatActivity {
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
         mDisplayTitle = findViewById(R.id.tv_funding_title);
         mBtnPost = findViewById(R.id.btn_post_activity);
-        mDisplayDescription = findViewById(R.id.display);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-        mNewSDG = findViewById(R.id.test_display2);
 
         //Criteria's
         mC1name = findViewById(R.id.c1_display_name);
