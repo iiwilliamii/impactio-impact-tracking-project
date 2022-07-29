@@ -28,7 +28,7 @@ public class TrackerAddActivity extends AppCompatActivity {
     Button btnLauncher = findViewById(R.id.addtracker);
     mNameInput = findViewById(R.id.et_nameInput);
     sdgInput = findViewById(R.id.sdg_add);
-    mWarningMessage = findViewById(R.id.tv_warning_message);
+//    mWarningMessage = findViewById(R.id.tv_warning_message);
 
 //        btnLauncher.setOnClickListener(new View.OnClickListener() {
 //        @Override

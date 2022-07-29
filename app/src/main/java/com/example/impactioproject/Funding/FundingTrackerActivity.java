@@ -137,7 +137,7 @@ public class FundingTrackerActivity extends AppCompatActivity {
                 if (!mTitle.getText().toString().isEmpty() && !mDescription.getText().toString().isEmpty()) {
 
                     Fundings funding = new Fundings(mTitle.getText().toString(), mAmount.getText().toString(), mDescription.getText().toString(), currentUser.getUid(), projectSymbol);
-
+                    addPost(funding, projectSymbol);
 
                 }else {
                     showMessage("Please fill in everything before sending!");

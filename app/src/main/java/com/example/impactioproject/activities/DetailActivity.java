@@ -117,8 +117,8 @@ public class DetailActivity extends AppCompatActivity {
         popAddPost.getWindow().getAttributes().gravity = Gravity.TOP;
 
         mProfile = popAddPost.findViewById(R.id.iv_avatar);
-        mTitle = popAddPost.findViewById(R.id.edit_Funding_Title);
-        mDescription = popAddPost.findViewById(R.id.edit_Funding_Description);
+        mTitle = popAddPost.findViewById(R.id.edit_post_Title);
+        mDescription = popAddPost.findViewById(R.id.edit_post_Description);
         mClickProgress = popAddPost.findViewById(R.id.progressBar);
         mSend = popAddPost.findViewById(R.id.iv_send);
         mClickProgress.setVisibility(View.INVISIBLE);
