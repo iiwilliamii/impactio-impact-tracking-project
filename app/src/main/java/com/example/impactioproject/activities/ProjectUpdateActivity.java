@@ -12,7 +12,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,10 +19,9 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
-import com.example.impactioproject.PostModels.Post;
+import com.example.impactioproject.PostModels.Posts;
 import com.example.impactioproject.PostModels.PostAdapter;
 import com.example.impactioproject.R;
-import com.example.impactioproject.projects.Projects;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -52,7 +50,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    List<Post> postList;
+    List<Posts> postsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,10 +91,10 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                postList = new ArrayList<>();
+                postsList = new ArrayList<>();
                 for (DataSnapshot postSnap: snapshot.getChildren()) {
-                    Post post = postSnap.getValue(Post.class);
-                    postList.add(post);
+                    Posts posts = postSnap.getValue(Posts.class);
+                    postsList.add(posts);
                 }
 
                 PostAdapter.RecyclerViewListener listener = new PostAdapter.RecyclerViewListener() {
@@ -105,7 +103,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
                         //TODO: make something happen when you click this
                     }
                 };
-                mAdapter = new PostAdapter(listener, postList);
+                mAdapter = new PostAdapter(listener, postsList);
                 mRecyclerView.setAdapter(mAdapter);
             }
 
@@ -126,8 +124,8 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         popAddPost.getWindow().getAttributes().gravity = Gravity.TOP;
 
         mProfile = popAddPost.findViewById(R.id.iv_avatar);
-        mTitle = popAddPost.findViewById(R.id.editTitle);
-        mDescription = popAddPost.findViewById(R.id.editDescription);
+        mTitle = popAddPost.findViewById(R.id.edit_Funding_Title);
+        mDescription = popAddPost.findViewById(R.id.edit_Funding_Description);
         mClickProgress = popAddPost.findViewById(R.id.progressBar);
         mSend = popAddPost.findViewById(R.id.iv_send);
         mClickProgress.setVisibility(View.INVISIBLE);
@@ -142,8 +140,8 @@ public class ProjectUpdateActivity extends AppCompatActivity {
 
                 if (!mTitle.getText().toString().isEmpty() && !mDescription.getText().toString().isEmpty()) {
 
-                    Post post = new Post(mTitle.getText().toString(), mDescription.getText().toString(), projectSymbol, currentUser.getUid());
-                    addPost(post, projectSymbol);
+                    Posts posts = new Posts(mTitle.getText().toString(), mDescription.getText().toString(), projectSymbol, currentUser.getUid());
+                    addPost(posts, projectSymbol);
 
                 }else {
                     showMessage("Please fill in everything before sending!");
@@ -154,19 +152,19 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         });
     }
 
-    private void addPost(Post post, String projectSymbol) {
+    private void addPost(Posts posts, String projectSymbol) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Posts" + projectSymbol).push();
 
-        //get post uID and update post key
+        //get posts uID and update posts key
         String key = myRef.getKey();
-        post.setPostKey(key);
+        posts.setPostKey(key);
 
-        myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+        myRef.setValue(posts).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                showMessage("Post Added successfully");
+                showMessage("Posts Added successfully");
                 mClickProgress.setVisibility(View.INVISIBLE);
                 mSend.setVisibility(View.VISIBLE);
                 popAddPost.dismiss();

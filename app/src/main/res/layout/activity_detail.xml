@@ -116,6 +116,16 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_timeline"
         app:layout_constraintTop_toTopOf="@+id/textView17" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="284dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="@drawable/graph" />
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="360dp"
         android:layout_height="80dp"
@@ -154,185 +164,11 @@
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/display"
+        android:id="@+id/tv_project_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="SDG"
+        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/tv_detail_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
-
-    <TextView
-        android:id="@+id/test_display2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:text="2, 4"
-        app:layout_constraintStart_toEndOf="@+id/display"
-        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
-
-    <TextView
-        android:id="@+id/c1_display_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_name3"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/c1_display_name3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="C1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/c1_display_name4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="C2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_name3" />
-
-    <TextView
-        android:id="@+id/c1_display_name6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="C3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_name4" />
-
-    <TextView
-        android:id="@+id/c4_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_name6" />
-
-    <TextView
-        android:id="@+id/c2_display_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_name4"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_name" />
-
-    <TextView
-        android:id="@+id/c3_display_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_name6"
-        app:layout_constraintTop_toBottomOf="@+id/c2_display_name" />
-
-    <TextView
-        android:id="@+id/c4_display_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_name6"
-        app:layout_constraintTop_toBottomOf="@+id/c3_display_name" />
-
-    <TextView
-        android:id="@+id/c2_display_sdg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toEndOf="@+id/c2_display_name"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_sdg" />
-
-    <TextView
-        android:id="@+id/c3_display_sdg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toEndOf="@+id/c3_display_name"
-        app:layout_constraintTop_toBottomOf="@+id/c2_display_sdg" />
-
-    <TextView
-        android:id="@+id/c4_display_sdg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
-        app:layout_constraintStart_toEndOf="@+id/c4_display_name"
-        app:layout_constraintTop_toBottomOf="@+id/c3_display_sdg" />
-
-    <TextView
-        android:id="@+id/c2_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/c2_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_description" />
-
-    <TextView
-        android:id="@+id/c3_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/c3_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/c2_display_description" />
-
-    <TextView
-        android:id="@+id/c4_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toEndOf="@+id/c3_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/c3_display_description" />
-
-    <TextView
-        android:id="@+id/c1_display_sdg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/c1_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

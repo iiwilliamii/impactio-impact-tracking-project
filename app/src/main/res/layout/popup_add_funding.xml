@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Popout_page"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_height="450dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,9 +26,9 @@
         <EditText
             android:id="@+id/edit_Funding_Title"
             android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="55dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="55dp"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:hint="Title"
@@ -43,10 +41,10 @@
         <EditText
             android:id="@+id/edit_Funding_Description"
             android:layout_width="300dp"
-            android:layout_height="100dp"
-            android:backgroundTint="#FFFFFF"
+            android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="160dp"
+            android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:hint="Description"
             android:inputType="textPersonName"
@@ -57,7 +55,7 @@
             android:id="@+id/iv_send"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginTop="295dp"
+            android:layout_marginTop="365dp"
             android:layout_marginLeft="175dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +67,7 @@
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="370dp"
             android:backgroundTint="#FFFFFF"
             android:progressTint="#66F8CA"
             android:visibility="visible"
@@ -95,6 +93,23 @@
             android:layout_marginTop="125dp"
             android:layout_marginLeft="10dp"
             android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_funding_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/funding_amount"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/et_funding_amount"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="285dp"
+            android:hint="@string/funding_amount"/>
 
     </com.google.android.material.card.MaterialCardView>
 

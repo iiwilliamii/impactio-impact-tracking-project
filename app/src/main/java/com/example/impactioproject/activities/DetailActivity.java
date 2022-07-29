@@ -20,7 +20,7 @@ import android.widget.Toolbar;
 
 import com.example.impactioproject.Funding.FundingTrackerActivity;
 import com.bumptech.glide.Glide;
-import com.example.impactioproject.PostModels.Post;
+import com.example.impactioproject.PostModels.Posts;
 import com.example.impactioproject.R;
 import com.example.impactioproject.projects.Projects;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -56,14 +56,14 @@ public class DetailActivity extends AppCompatActivity {
     FirebaseUser currentUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    List<Post> postList;
+    List<Posts> postsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
-        mDisplayTitle = findViewById(R.id.tv_detail_title);
+        mDisplayTitle = findViewById(R.id.tv_funding_title);
         mBtnPost = findViewById(R.id.btn_post_activity);
         mDisplayDescription = findViewById(R.id.display);
         mAuth = FirebaseAuth.getInstance();
@@ -174,8 +174,8 @@ public class DetailActivity extends AppCompatActivity {
         popAddPost.getWindow().getAttributes().gravity = Gravity.TOP;
 
         mProfile = popAddPost.findViewById(R.id.iv_avatar);
-        mTitle = popAddPost.findViewById(R.id.editTitle);
-        mDescription = popAddPost.findViewById(R.id.editDescription);
+        mTitle = popAddPost.findViewById(R.id.edit_Funding_Title);
+        mDescription = popAddPost.findViewById(R.id.edit_Funding_Description);
         mClickProgress = popAddPost.findViewById(R.id.progressBar);
         mSend = popAddPost.findViewById(R.id.iv_send);
         mClickProgress.setVisibility(View.INVISIBLE);
@@ -190,8 +190,8 @@ public class DetailActivity extends AppCompatActivity {
 
                 if (!mTitle.getText().toString().isEmpty() && !mDescription.getText().toString().isEmpty()) {
 
-                    Post post = new Post(mTitle.getText().toString(), mDescription.getText().toString(), projectSymbol, currentUser.getUid());
-                    addPost(post, projectSymbol);
+                    Posts posts = new Posts(mTitle.getText().toString(), mDescription.getText().toString(), projectSymbol, currentUser.getUid());
+                    addPost(posts, projectSymbol);
 
                 }else {
                     showMessage("Please fill in everything before sending!");
@@ -202,18 +202,18 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    private void addPost(Post post, String projectSymbol) {
+    private void addPost(Posts posts, String projectSymbol) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Posts").push();
 
-        //get post uID and update post key
+        //get posts uID and update posts key
         String key = myRef.getKey();
-        post.setPostKey(key);
+        posts.setPostKey(key);
 
-        myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+        myRef.setValue(posts).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                showMessage("Post Added successfully");
+                showMessage("Posts Added successfully");
                 mClickProgress.setVisibility(View.INVISIBLE);
                 mSend.setVisibility(View.VISIBLE);
                 popAddPost.dismiss();
