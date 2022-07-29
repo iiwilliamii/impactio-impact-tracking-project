@@ -6,76 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".activities.TrackerAddActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="169dp"
-        android:layout_height="67dp"
-        android:layout_marginBottom="0dp"
-        android:elevation="10dp"
-        android:outlineProvider="background"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:srcCompat="@drawable/impactio" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="354dp"
-        android:layout_height="306dp"
+        android:layout_width="358dp"
+        android:layout_height="551dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.562">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <EditText
             android:id="@+id/et_nameInput"
-            android:layout_width="278dp"
+            android:layout_width="280dp"
             android:layout_height="50dp"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="150dp"
             android:ems="0"
             android:hint="@string/tracker_add"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/tv_warning_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
             android:id="@+id/textView2"
-            android:layout_width="278dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="70dp"
-            android:text="Add your desired goal here!"
-            android:textSize="16sp" />
+            android:layout_marginTop="100dp"
+            android:text="Customised Goal"
+            android:textSize="25sp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/addtracker"
             android:layout_width="wrap_content"
-            android:onClick="addtracker"
             android:layout_height="60dp"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="450dp"
             android:elevation="10dp"
+            android:onClick="addtracker"
             android:text="Add"
             app:cornerRadius="20dp"
             app:elevation="10dp" />
 
         <EditText
             android:id="@+id/sdg_add"
-            android:layout_width="278dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="210dp"
             android:ems="0"
             android:hint="SDG (Optional)"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="50dp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:minHeight="50dp"
+            android:hint="@string/Description"
+            android:layout_marginLeft="35dp"/>
+
+        <EditText
+            android:id="@+id/et_points"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:hint="@string/points"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="330dp"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:outlineProvider="background"
+            app:srcCompat="@drawable/impactio" />
 
     </androidx.cardview.widget.CardView>
 

@@ -35,4 +35,6 @@
     <string name="Title">Title</string>
     <string name="Description">Description</string>
     <string name="loading">Loading...</string>
+    <string name="finish">Finish</string>
+    <string name="points">Points</string>
 </resources>
