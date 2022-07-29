@@ -73,7 +73,7 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Posts" + projectSymbol);
 
-        mPopup = findViewById(R.id.floatingActionButton);
+        mPopup = findViewById(R.id.add_post);
         mPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,8 +124,8 @@ public class ProjectUpdateActivity extends AppCompatActivity {
         popAddPost.getWindow().getAttributes().gravity = Gravity.TOP;
 
         mProfile = popAddPost.findViewById(R.id.iv_avatar);
-        mTitle = popAddPost.findViewById(R.id.edit_Funding_Title);
-        mDescription = popAddPost.findViewById(R.id.edit_Funding_Description);
+        mTitle = popAddPost.findViewById(R.id.edit_post_Title);
+        mDescription = popAddPost.findViewById(R.id.edit_post_Description);
         mClickProgress = popAddPost.findViewById(R.id.progressBar);
         mSend = popAddPost.findViewById(R.id.iv_send);
         mClickProgress.setVisibility(View.INVISIBLE);
