@@ -65,10 +65,8 @@ public class DetailActivity extends AppCompatActivity {
         mDisplayPoints = findViewById(R.id.tv_tracker_points);
         mDisplayTitle = findViewById(R.id.tv_funding_title);
         mBtnPost = findViewById(R.id.btn_post_activity);
-        mDisplayDescription = findViewById(R.id.display);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-        mNewSDG = findViewById(R.id.test_display2);
 
         //Criteria's
         mC1name = findViewById(R.id.c1_display_name);
@@ -85,13 +83,13 @@ public class DetailActivity extends AppCompatActivity {
         mC4sdg = findViewById(R.id.c4_display_sdg);
         mC4description = findViewById(R.id.c4_display_description);
 
-        Intent intent = getIntent();
-        String projectSymbolId = intent.getStringExtra("projectSymbol");
-        project = Projects.findProjects(projectSymbolId);
-        if (project != null) {
-            mDisplayTitle.setText(project.getName());
-            mDisplayDescription.setText(project.getSymbol());
-        }
+//        Intent intent = getIntent();
+//        String projectSymbolId = intent.getStringExtra("projectSymbol");
+//        project = Projects.findProjects(projectSymbolId);
+//        if (project != null) {
+//            mDisplayTitle.setText(project.getName());
+//            mDisplayDescription.setText(project.getSymbol());
+//        }
 
         SharedPreferences sp = this.getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         score = sp.getInt("score", 0);
@@ -128,13 +126,13 @@ public class DetailActivity extends AppCompatActivity {
         mC4description.setText(c4description);
 
 
-        mBtnActivity = findViewById(R.id.btn_activity);
-        mBtnActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                launchProjectUpdates(projectSymbolId);
-            }
-        });
+//        mBtnActivity = findViewById(R.id.btn_activity);
+//        mBtnActivity.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                launchProjectUpdates(projectSymbolId);
+//            }
+//        });
 
         Button btnFAQ = findViewById(R.id.btn_update_tracking);
         btnFAQ.setOnClickListener(new View.OnClickListener() {
@@ -159,7 +157,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        iniPopup(projectSymbolId);
+//        iniPopup(projectSymbolId);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Posts");

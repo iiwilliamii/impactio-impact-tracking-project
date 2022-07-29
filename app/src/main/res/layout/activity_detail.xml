@@ -47,7 +47,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:elevation="20dp"
-        android:text="@string/post"
+        android:text="Post"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btn_update_tracking"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -116,16 +116,6 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_timeline"
         app:layout_constraintTop_toTopOf="@+id/textView17" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="284dp"
-        android:layout_height="180dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:srcCompat="@drawable/graph" />
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="360dp"
         android:layout_height="80dp"
@@ -170,5 +160,152 @@
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/tv_detail_title"
         app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+    <TextView
+        android:id="@+id/C1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/c1_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/C1"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/c2_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c2"
+        app:layout_constraintTop_toBottomOf="@+id/c1_display_name" />
+
+    <TextView
+        android:id="@+id/c3_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c5"
+        app:layout_constraintTop_toBottomOf="@+id/c2_display_name" />
+
+    <TextView
+        android:id="@+id/c4_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c4_title"
+        app:layout_constraintTop_toBottomOf="@+id/c3_display_name" />
+
+    <TextView
+        android:id="@+id/c3_display_sdg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c3_display_name"
+        app:layout_constraintTop_toBottomOf="@+id/c2_display_sdg" />
+
+    <TextView
+        android:id="@+id/c4_display_sdg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c4_display_name"
+        app:layout_constraintTop_toBottomOf="@+id/c3_display_sdg" />
+
+    <TextView
+        android:id="@+id/c4_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/c4_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/c3_display_description" />
+
+    <TextView
+        android:id="@+id/c3_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/c3_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/c2_display_description" />
+
+    <TextView
+        android:id="@+id/c1_display_sdg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/c1_display_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/c2_display_sdg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c2_display_name"
+        app:layout_constraintTop_toBottomOf="@+id/c1_display_sdg" />
+
+    <TextView
+        android:id="@+id/c2_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c2_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/c1_display_description" />
+
+    <TextView
+        android:id="@+id/c1_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/c1_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/btn_timeline" />
+
+    <TextView
+        android:id="@+id/c2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="C2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/C1" />
+
+    <TextView
+        android:id="@+id/c5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="C3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/C1" />
+
+    <TextView
+        android:id="@+id/c4_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/C1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
