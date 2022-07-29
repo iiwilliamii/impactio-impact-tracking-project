@@ -1,34 +1,24 @@
-package com.example.impactioproject.PostModels;
+package com.example.impactioproject.Funding;
 
 import com.google.firebase.database.ServerValue;
 
-public class Post {
+public class Fundings {
 
     private String postKey;
     private String title;
+    private String fundingAmount;
     private String description;
     private String userId;
-    private String postSymbol;
+    private String fundSymbol;
     private Object timeStamp;
 
-    public Post(String title, String description, String postSymbol, String userId) {
+    public Fundings(String title, String fundingAmount, String description, String userId, String fundSymbol) {
         this.title = title;
+        this.fundingAmount = fundingAmount;
         this.description = description;
-        this.postSymbol = postSymbol;
         this.userId = userId;
+        this.fundSymbol = fundSymbol;
         this.timeStamp = ServerValue.TIMESTAMP;
-    }
-
-    public Post() {
-
-    }
-
-    public String getPostSymbol() {
-        return postSymbol;
-    }
-
-    public void setPostSymbol(String postSymbol) {
-        this.postSymbol = postSymbol;
     }
 
     public String getPostKey() {
@@ -47,6 +37,14 @@ public class Post {
         this.title = title;
     }
 
+    public String getFundingAmount() {
+        return fundingAmount;
+    }
+
+    public void setFundingAmount(String fundingAmount) {
+        this.fundingAmount = fundingAmount;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -61,6 +59,14 @@ public class Post {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getFundSymbol() {
+        return fundSymbol;
+    }
+
+    public void setFundSymbol(String fundSymbol) {
+        this.fundSymbol = fundSymbol;
     }
 
     public Object getTimeStamp() {

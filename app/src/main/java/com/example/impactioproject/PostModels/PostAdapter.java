@@ -18,10 +18,10 @@ import java.util.Locale;
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
 //    Context mContext;
-    List<Post> mData;
+    List<Posts> mData;
     RecyclerViewListener mListener;
 
-    public PostAdapter(RecyclerViewListener listener, List<Post> mData) {
+    public PostAdapter(RecyclerViewListener listener, List<Posts> mData) {
 //        this.mContext = mContext;
         this.mData = mData;
         this.mListener = listener;

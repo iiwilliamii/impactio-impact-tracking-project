@@ -7,7 +7,7 @@
     tools:context=".activities.DetailActivity">
 
     <TextView
-        android:id="@+id/tv_detail_title"
+        android:id="@+id/tv_funding_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -24,8 +24,8 @@
         android:layout_marginTop="8dp"
         android:text="@string/project_status"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+        app:layout_constraintStart_toStartOf="@+id/tv_funding_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_funding_title" />
 
     <Button
         android:id="@+id/btn_update_tracking"
@@ -47,7 +47,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:elevation="20dp"
-        android:text="@string/post"
+        android:text="@string/posts"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/btn_update_tracking"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -84,7 +84,7 @@
         android:layout_marginTop="36dp"
         android:text="@string/project_timeline"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_funding_title"
         app:layout_constraintTop_toBottomOf="@+id/btn_update_tracking" />
 
     <TextView
@@ -168,7 +168,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_detail_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+        app:layout_constraintStart_toEndOf="@+id/tv_funding_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_funding_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

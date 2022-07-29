@@ -21,7 +21,7 @@
     <string name="review_required">Review Required</string>
     <string name="running_behind">Running Behind</string>
     <string name="Update">Update</string>
-    <string name="post">Post</string>
+    <string name="posts">Post</string>
     <string name="project_members">Project Members</string>
     <string name="project_timeline">Project Timeline</string>
     <string name="Project_activity">Project Activity</string>
@@ -37,4 +37,5 @@
     <string name="loading">Loading...</string>
     <string name="finish">Finish</string>
     <string name="points">Points</string>
+    <string name="funding_amount">Funding Amount</string>
 </resources>
