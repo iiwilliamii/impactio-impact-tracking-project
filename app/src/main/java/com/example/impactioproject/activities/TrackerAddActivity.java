@@ -50,8 +50,8 @@ public class TrackerAddActivity extends AppCompatActivity {
 }
 
     public void addtracker(View view) {
-        name = mNameInput.getText().toString();
-        sdg = sdgInput.getText().toString();
+        String name = mNameInput.getText().toString();
+        String sdg = sdgInput.getText().toString();
         SharedPreferences sp2 = getSharedPreferences("TrackerName", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp2.edit();
         editor.putString("name", name);
