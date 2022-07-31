@@ -30,23 +30,6 @@ public class TrackerAddActivity extends AppCompatActivity {
     mNameInput = findViewById(R.id.et_nameInput);
     sdgInput = findViewById(R.id.sdg_add);
     mdescInput = findViewById(R.id.et_description);
-//    mWarningMessage = findViewById(R.id.tv_warning_message);
-
-//        btnLauncher.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            name = mNameInput.getText().toString();
-//            if (name.isEmpty()) {
-//                String loginFailed = "Please enter a tracker first!";
-//                Toast.makeText(TrackerAddActivity.this, loginFailed, Toast.LENGTH_SHORT).show();
-//            } else {
-//                name = mNameInput.getText().toString();
-//                sdg = sdgInput.getText().toString();
-//                String loginSuccess = "Tracker added!";
-//                Toast.makeText(TrackerAddActivity.this, loginSuccess, Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    });
 }
 
     public void addtracker(View view) {

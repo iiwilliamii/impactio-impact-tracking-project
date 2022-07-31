@@ -52,6 +52,7 @@ public class Projects {
         projects.add(new Projects("01", "Project 1: Sustainable Impact", "P1", "We are seeking projects that offer smarter, faster ways to make real progress on the United Nations Sustainable Development Goals and transform the way we do business in NSW. Our mission is to solve wicked sustainability problems. "));
         projects.add(new Projects("02", "Project 2: Innovate + Regen", "P2", "Innovate to Regenerate seeks to support and amplify community-led regeneration. We’re working together to make sure communities are supported."));
         projects.add(new Projects("03", "Project 3: Cities of Tomorrow", "P3", "Innovate to Regenerate seeks to support and amplify community-led regeneration. We’re working together to make sure communities are supported."));
+        projects.add(new Projects("04", "Project 4: Bushfire Challenge", "P4", "We look for solutions that enable and incentivise landholders and communities to own and drive regeneration outcomes. Solutions should cover at least one of these areas: fire risk management, regenerative land use, species recovery and building ecological, economic and social resilience to climate change.."));
         return projects;
     }
 

@@ -71,8 +71,8 @@ public class TrackerDetailActivity extends AppCompatActivity {
 
     public void add1(View view) {
         score += 25;
-        String c1name = "Reduce hunger in Africa";
-        String c1sdg = "SDG:12";
+        String c1name = "Speed transition to net zero";
+        String c1sdg = "SDG:17";
         String c1description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
@@ -89,8 +89,8 @@ public class TrackerDetailActivity extends AppCompatActivity {
     }
     public void add2(View view) {
         score += 30;
-        String c2name = "Improve education standards by 12.5% in Sri Lanka";
-        String c2sdg = "SDG::4";
+        String c2name = "Advance the circular economy";
+        String c2sdg = "SDG:8";
         String c2description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
@@ -107,8 +107,8 @@ public class TrackerDetailActivity extends AppCompatActivity {
     }
     public void add3(View view) {
         score += 10;
-        String c3name = "Finish yearly financial report by EOFY 2023";
-        String c3sdg = "SDG:N/A";
+        String c3name = "Benefit nature";
+        String c3sdg = "SDG:15";
         String c3description = "Completed ✓";
         SharedPreferences sp = getSharedPreferences("TotalPoints", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
