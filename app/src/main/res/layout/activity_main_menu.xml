@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="40dp"
-            android:text="@string/enrolled_project_title"
+            android:text="The Equality Project"
             android:textSize="10sp" />
 
         <ImageView

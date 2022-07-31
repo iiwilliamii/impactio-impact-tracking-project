@@ -49,8 +49,9 @@ public class Projects {
 
     public static ArrayList<Projects> getProjects() {
         ArrayList<Projects> projects = new ArrayList<>();
-        projects.add(new Projects("01", "Project 1", "P1", "This is a test script on project 1 to see if it works."));
-        projects.add(new Projects("02", "Project 2", "P2", "This is a test script on project 2 to see if it works."));
+        projects.add(new Projects("01", "Project 1: The Equality Project", "P1", "The main goal of this project is to ensure that the children in South-East Asia and Africa are getting equality and no hunger."));
+        projects.add(new Projects("02", "Project 2: Innovate + Regen", "P2", "Innovate to Regenerate seeks to support and amplify community-led regeneration. We’re working together to make sure communities are supported."));
+        projects.add(new Projects("03", "Project 3: Cities of Tomorrow", "P3", "Innovate to Regenerate seeks to support and amplify community-led regeneration. We’re working together to make sure communities are supported."));
         return projects;
     }
 
