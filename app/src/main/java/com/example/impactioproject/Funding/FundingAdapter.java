@@ -60,7 +60,7 @@ public class FundingAdapter extends RecyclerView.Adapter<FundingAdapter.FundingV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mData.size();
     }
 
     public interface RecyclerViewListener {

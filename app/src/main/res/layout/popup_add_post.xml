@@ -26,7 +26,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <EditText
-            android:id="@+id/edit_Funding_Title"
+            android:id="@+id/edit_post_Title"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_marginTop="55dp"
@@ -41,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/edit_Funding_Description"
+            android:id="@+id/edit_post_Description"
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:backgroundTint="#FFFFFF"

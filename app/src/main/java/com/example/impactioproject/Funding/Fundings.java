@@ -21,6 +21,10 @@ public class Fundings {
         this.timeStamp = ServerValue.TIMESTAMP;
     }
 
+    public Fundings() {
+
+    }
+
     public String getPostKey() {
         return postKey;
     }

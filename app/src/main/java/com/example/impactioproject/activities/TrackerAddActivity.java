@@ -50,25 +50,19 @@ public class TrackerAddActivity extends AppCompatActivity {
 }
 
     public void addtracker(View view) {
-        score += 50;
-        String c4title = "Custom Criteria #1";
-        c4name = mNameInput.getText().toString();
-        c4sdg = sdgInput.getText().toString();
-        c4description = mdescInput.getText().toString();
+        name = mNameInput.getText().toString();
+        sdg = sdgInput.getText().toString();
         SharedPreferences sp2 = getSharedPreferences("TrackerName", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp2.edit();
-        editor.putString("c4title", c4title);
-        editor.putString("c4name", c4name);
-        editor.putString("c4sdg", c4sdg);
-        editor.putInt("score", score);
+        editor.putString("name", name);
+        editor.putString("sdg", sdg);
         editor.apply();
-        String loginSuccess = "Custom Criteria added successfully!";
+        String loginSuccess = "Tracker added!";
         Toast.makeText(TrackerAddActivity.this, loginSuccess, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(TrackerAddActivity.this, DetailActivity.class);
+        Intent intent = new Intent(TrackerAddActivity.this, TrackerDetailActivity.class);
         startActivity(intent);
     }
-
 
 
     private void launchTrackingDetails(){
