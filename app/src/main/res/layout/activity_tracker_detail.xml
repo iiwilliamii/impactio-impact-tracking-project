@@ -10,51 +10,48 @@
         android:id="@+id/returnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="648dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_10"
         android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/cv_25"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/c1_tracker_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Speed transition to net zero"
+            android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/c1_tracker_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="200dp"
-                android:text="Speed transition to net zero"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/add1"
-                android:layout_width="66dp"
-                android:layout_height="wrap_content"
-                android:onClick="add1"
-                android:text="@string/add"
-                app:cornerRadius="20dp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/add1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="25dp"
+            android:onClick="add1"
+            android:text="@string/add"
+            app:cornerRadius="20dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_25"
         android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
@@ -62,17 +59,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="51dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="200dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
                 android:text="Advance the circular economy"
                 android:textSize="20sp" />
 
@@ -80,10 +72,11 @@
                 android:id="@+id/add2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="250dp"
                 android:onClick="add2"
                 android:text="@string/add"
                 app:cornerRadius="20dp" />
-        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -94,59 +87,45 @@
         app:cardElevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="200dp"
-                android:text="Benefit nature"
-                android:textSize="20sp" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="200dp"
+            android:text="Benefit nature"
+            android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/add3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="add3"
-                android:text="@string/add"
-                app:cornerRadius="20dp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/add3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="5dp"
+            android:onClick="add3"
+            android:text="@string/add"
+            app:cornerRadius="20dp" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_100"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+    <Button
+        android:id="@+id/btn_add_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:onClick="add4"
+        android:text="Add Custom Criteria"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_50">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_add_tracker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="add4"
-                android:text="Add Criteria"
-                app:cornerRadius="20dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/cv_50" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="414dp"
@@ -156,30 +135,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/shopCurrentPoints"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
-                android:text="TextView"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="180dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="20dp"
                 android:text="Proposed Criteria's"
-                android:textAlignment="textEnd"
                 android:textSize="20sp" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/shopCurrentPoints"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="25dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

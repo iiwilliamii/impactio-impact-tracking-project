@@ -41,6 +41,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         Projects project = mProjectsFiltered.get(position);
         holder.mName.setText(project.getName());
         holder.mDescription.setText(project.getDescription());
+        holder.mImage.setImageResource(project.getImage());
         holder.itemView.setTag(project.getSymbol());
 
     }
@@ -91,9 +92,11 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
 
         public ProjectViewHolder(View view, RecyclerViewClickListener listener) {
             super(view);
-            mImage = view.findViewById(R.id.iv_shop_main);
+            mImage = view.findViewById(R.id.iv_project_image);
             mName = view.findViewById(R.id.tv_funding_row_title);
             mDescription = view.findViewById(R.id.tv_funding_row_description);
+            mImage = view.findViewById(R.id.iv_project_image);
+
             mListener = listener;
             view.setOnClickListener(this);
         }

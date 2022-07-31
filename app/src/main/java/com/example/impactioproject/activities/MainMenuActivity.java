@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.impactioproject.projects.ProjectAdapter;
@@ -16,10 +17,10 @@ import com.example.impactioproject.R;
 
 public class MainMenuActivity extends AppCompatActivity {
     private TextView mName;
-    private Button mProfile;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView mRecyclerView;
     private ProjectAdapter mAdapter;
+    private ImageView mProfilePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,8 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         mName = findViewById(R.id.tv_name);
-        mProfile = findViewById(R.id.btn_profile);
         mRecyclerView = findViewById(R.id.rv_project_list);
+        mProfilePage = findViewById(R.id.iv_profile_page);
         mRecyclerView.setHasFixedSize(true);
 
         mLayoutManager = new LinearLayoutManager(this);
@@ -44,7 +45,8 @@ public class MainMenuActivity extends AppCompatActivity {
         mAdapter = new ProjectAdapter(Projects.getProjects(), listener);
 //        mAdapter.sort(ProjectAdapter.SORT_METHOD_NAME);
         mRecyclerView.setAdapter(mAdapter);
-        mProfile.setOnClickListener(new View.OnClickListener() {
+
+        mProfilePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 launchProfileActivity();

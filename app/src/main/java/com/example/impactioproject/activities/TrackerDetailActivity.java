@@ -31,7 +31,7 @@ public class TrackerDetailActivity extends AppCompatActivity {
         mCardView10 = findViewById(R.id.cv_10);
         mCardView25 = findViewById(R.id.cv_25);
         mCardView50 = findViewById(R.id.cv_50);
-        mCardView100 = findViewById(R.id.cv_100);
+//        mCardView100 = findViewById(R.id.cv_100);
 
 
 //        Animation animation = new AnimationUtils().loadAnimation(getApplicationContext(), R.anim.fadein);
