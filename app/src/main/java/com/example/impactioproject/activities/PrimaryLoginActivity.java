@@ -15,7 +15,7 @@ import com.example.impactioproject.projects.Projects;
 
 public class PrimaryLoginActivity extends AppCompatActivity {
     private TextView mName;
-    private Button mLogin;
+    private Button mLogin, mSignUp;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView mRecyclerView;
     private ProjectAdapter mAdapter;
@@ -27,13 +27,22 @@ public class PrimaryLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_primary_login);
 
         mLogin = findViewById(R.id.loginBtn);
+        mSignUp = findViewById(R.id.signUpBtn);
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 launchLoginActivity();
             }
         });
+
+        mSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchLoginActivity();
+            }
+        });
     }
+
 
     private void launchLoginActivity() {
         Intent intent = new Intent(this, LoginActivityMain.class);
