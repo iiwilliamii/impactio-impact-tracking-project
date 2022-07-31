@@ -43,7 +43,7 @@ public class TrackerAddActivity extends AppCompatActivity {
         String loginSuccess = "Tracker added!";
         Toast.makeText(TrackerAddActivity.this, loginSuccess, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(TrackerAddActivity.this, TrackerDetailActivity.class);
+        Intent intent = new Intent(TrackerAddActivity.this, DetailActivity.class);
         startActivity(intent);
     }
 
