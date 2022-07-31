@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="@string/project_timeline"
+        android:text="Criteria Completion Status"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
         app:layout_constraintTop_toBottomOf="@+id/btn_update_tracking" />
@@ -99,13 +99,15 @@
 
     <Button
         android:id="@+id/btn_timeline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/details"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="@+id/btn_post_activity"
-        app:layout_constraintTop_toTopOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.551" />
+        android:layout_width="149dp"
+        android:layout_height="54dp"
+        android:text="Funding Allocation"
+        app:layout_constraintBottom_toTopOf="@+id/btn_post_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/dodd"
+        app:layout_constraintTop_toBottomOf="@+id/tv_project_detail"
+        app:layout_constraintVertical_bias="0.425" />
 
     <Button
         android:id="@+id/btn_activity"
@@ -227,19 +229,37 @@
 
     <TextView
         android:id="@+id/c4_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/c4_display_sdg"
         app:layout_constraintTop_toBottomOf="@+id/c3_display_description" />
+
+    <TextView
+        android:id="@+id/c1_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/c1_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/c2_display_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/c2_display_sdg"
+        app:layout_constraintTop_toBottomOf="@+id/c1_display_description" />
 
     <TextView
         android:id="@+id/c3_display_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/c3_display_sdg"
         app:layout_constraintTop_toBottomOf="@+id/c2_display_description" />
 
@@ -260,24 +280,6 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/c2_display_name"
         app:layout_constraintTop_toBottomOf="@+id/c1_display_sdg" />
-
-    <TextView
-        android:id="@+id/c2_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/c2_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/c1_display_description" />
-
-    <TextView
-        android:id="@+id/c1_display_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/c1_display_sdg"
-        app:layout_constraintTop_toBottomOf="@+id/btn_timeline" />
 
     <TextView
         android:id="@+id/c2"

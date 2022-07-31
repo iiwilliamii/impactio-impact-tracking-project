@@ -7,7 +7,7 @@
     <string name="welcome_message">Glad to see you back</string>
     <string name="project1">Project 1</string>
     <string name="project2">Project 2</string>
-    <string name="enrolled_project">Enrolled Project</string>
+    <string name="enrolled_project">Current Enrolled Project:</string>
     <string name="enrolled_project_title">Reduced Inequality</string>
     <string name="project1_description">test1</string>
     <string name="project2_description">test2</string>
