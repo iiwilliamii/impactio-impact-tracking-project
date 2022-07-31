@@ -44,11 +44,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Full Name"
+        android:text="William Zhu"
         android:textColor="@color/white"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -57,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Job/Project Title"
+        android:text="Project Developer"
         android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="TextView"
+        android:text="William Zhu"
         app:layout_constraintBottom_toBottomOf="@+id/tv_name"
         app:layout_constraintStart_toEndOf="@+id/tv_name"
         app:layout_constraintTop_toTopOf="@+id/tv_name" />
@@ -124,7 +125,7 @@
         android:id="@+id/websiteUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="https://impactio.global/"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/userName"
         app:layout_constraintTop_toTopOf="@+id/textView7" />
@@ -133,7 +134,7 @@
         android:id="@+id/emailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Williamzhu65@gmail.com"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/websiteUrl"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -142,7 +143,7 @@
         android:id="@+id/userDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Sydney, Australia"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintStart_toStartOf="@+id/emailAddress"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
@@ -151,7 +152,7 @@
         android:id="@+id/userPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="0412541231"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/userDescription"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
